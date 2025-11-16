@@ -7,9 +7,11 @@ import GridHeatMap from './GridHeatMap';
 import ScatterHeatMap from './ScatterHeatMap';
 import RiskBreakdown from './RiskBreakdown';
 import RiskTable from './RiskTable';
+import ExportButtons from './ExportButtons';
 
 const RiskManagementDashboard: React.FC = () => {
   const {
+    risks,
     filteredRisks,
     categories,
     statuses,
@@ -31,7 +33,10 @@ const RiskManagementDashboard: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">Risk Management Dashboard</h1>
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-3xl font-bold text-gray-900">Risk Management Dashboard</h1>
+          <ExportButtons risks={risks} filteredRisks={filteredRisks} />
+        </div>
 
         <RiskFilters
           filters={filters}
