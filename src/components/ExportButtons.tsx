@@ -8,7 +8,7 @@ interface ExportButtonsProps {
   filteredRisks: Risk[];
 }
 
-const ExportButtons: React.FC<ExportButtonsProps> = ({ risks, filteredRisks }) => {
+const ExportButtons: React.FC<ExportButtonsProps> = ({ filteredRisks }) => {
   
   const exportToJSON = () => {
     const dataStr = JSON.stringify(filteredRisks, null, 2);

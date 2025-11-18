@@ -79,7 +79,7 @@ const GridHeatMap: React.FC<GridHeatMapProps> = ({ risks }) => {
                                 <div key={idx} className="text-xs border-l-2 border-blue-500 pl-2 py-1">
                                   <div className="font-medium">{risk.risk}</div>
                                   <div className="text-gray-600 mt-1">
-                                    Score: {risk.totalRiskScore} | {risk.category}
+                                    Probability: {risk.probability} | Impact: {risk.impact} | Score: {risk.totalRiskScore} | {risk.category}
                                   </div>
                                 </div>
                               ))}

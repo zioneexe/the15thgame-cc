@@ -60,7 +60,7 @@ const ScatterHeatMap: React.FC<ScatterHeatMapProps> = ({ risks }) => {
                   {risk.risk.length > 50 ? `${risk.risk.substring(0, 50)}...` : risk.risk}
                 </p>
                 <p className="text-xs text-gray-600 mt-1">
-                  Score: {risk.totalRiskScore} | {risk.category}
+                  Probability: {risk.probability} | Impact: {risk.impact} | Score: {risk.totalRiskScore} | {risk.category}
                 </p>
               </div>
             ))}
